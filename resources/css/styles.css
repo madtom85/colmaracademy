@@ -236,10 +236,13 @@ header .colmar {
 	flex-direction: column;
 	margin: 0;
 	background-color: #fff;
+	width: 32%;
+	margin-bottom: 2rem;
 }
 
 .middle{
-	margin: 0 2rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
 }
 
 .course-image{
@@ -249,7 +252,6 @@ header .colmar {
 
 .course-highlight{
 	padding-left: 1rem;
-	width: 100%;
 }
 
 
@@ -264,5 +266,39 @@ header .colmar {
 	padding-bottom: .5rem;
 }
 
-.course-subjects{
+#thesis-exhibit{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 2rem 0 2rem 1.5rem;
+}
+
+.thesis-row{
+	display: flex;
+	flex-direction: row;
+}
+
+.thesis-title{
+	padding-bottom: 2rem;
+}
+
+.thesis-title h2{
+	text-align: center;
+}
+
+.thesis-left{
+	display: flex;
+	flex-direction: column;
+	padding-right: 1.5rem;
+	width: 60%;
+}
+
+.thesis-video video{
+	width: 100%;
+	padding-right: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+
+.thesis-urban h3{
+	padding-bottom: .5rem;
 }
