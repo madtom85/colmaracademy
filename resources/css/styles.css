@@ -1,4 +1,6 @@
-html{
+/* Universal Styles */
+
+html {
 	font-family: Helvetica, "oswald", sans-serif;
 	font-size: 16px;
 	margin: 0;
@@ -6,7 +8,57 @@ html{
 	height: auto;
 }
 
-header .header-content{
+
+.container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}
+
+.item-image {
+	width: 35%;
+	display: inline-block;
+}
+
+.item-column {
+	width: 65%;
+}
+
+.bottom {
+	background: #e5e8e5;
+}
+
+.mid .item-image,
+.bottom .item-image {
+	padding: 1rem;
+}
+
+.item-image img {
+	width: 100%;
+}
+
+.item-column .item-title,
+.item-column .item-description {
+	padding-bottom: .5rem;
+}
+
+.item-title {
+	font-size: 2rem;
+	color: #383d3d;
+}
+
+.item-description {
+	font-size: 1.5rem;
+	font-weight: 300;
+	line-height: 1.1;
+	color: #767a7a;
+}
+
+
+/* Header Section */
+
+header .header-content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -17,14 +69,14 @@ header .header-content{
 	margin: 0;
 }
 
-header .logo-header-title{
+header .logo-header-title {
 	display: inline-flex;
 	align-items: center;
 	height: 2rem;
 	margin-left: 2rem;
 }
 
-header .logo{
+header .logo {
 	display: inline-flex;
 	align-items: center;
 }
@@ -33,25 +85,29 @@ header .logo img {
 	height: 3rem;
 }
 
-header .header-title{
+header .header-title {
 	display: inline-flex;
 	align-items: center;
 }
 
-header .header-title h2{
+header .header-title h2 {
 	font-size: 2rem;
 }
 
 header .colmar { 
-	color: red;
+	color: #767a7a;
 	font-style: italic;
 }
 
-.nav-mobile{
+header .academy {
+	color: #383d3d;
+}
+
+.nav-mobile {
 	display: none;
 }
 
-.nav-menu ul{
+.nav-menu ul {
 	display: inline-flex;
 	margin-right: 2rem;
 	align-items: center;
@@ -59,19 +115,19 @@ header .colmar {
 	flex-direction: row;
 }
 
-.nav-menu li{
+.nav-menu li {
 	padding: 0;
 }
 
-.nav-menu a{
+.nav-menu a {
 	font-size: 1.5rem;
 	text-decoration: none;
-	color: #000;
+	color: #767a7a;
 	font-weight: 300;
 }
 
 @media only screen and (max-width: 480px) {
-	.nav-mobile{
+	.nav-mobile {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -80,14 +136,15 @@ header .colmar {
 		width: 100%;
 	}
 
-	header .header-content{
+	header .header-content {
 		display: none;
 	}
 }
 
+/* Banner Section */
 
-#jumbotron-banner{
-	background-color: #ccc;
+#jumbotron-banner {
+	background-color: #e5e8e5;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -96,53 +153,57 @@ header .colmar {
 	margin: 0;
 }
 
-#jumbotron-banner-mobile{
+#jumbotron-banner-mobile {
 	display: none;
 }
 
-.jumbotron{
+.jumbotron {
 	padding: 2rem 1.5rem;
 	width: 60%;
 	height: 60%;
 }
 
-.jumbotron img{
+.jumbotron img {
 	height: 100%;
 	width: 100%;
 }
 
-.banner{
+.banner {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
+	font-family: "oswald";
 }
 
-.banner-big{
+.banner-big {
 	font-size: 3.5rem;
 	font-weight: bold;
 	line-height: 1.3;
+	color: #767a7a;
 }
 
 
-.banner-small{
+.banner-small {
 	font-size: 2rem;
 	font-weight: normal;
-	line-height: 1.3;
+	line-height: 1.2;
+	color: #383d3d;
 }
 
-.margin{
+.margin {
 	margin-top: 2rem;
 }
 
-.button{
+.button {
 	display: inline-block;
-	background-color: lightgreen;
+	background-color: #767a7a;
 	text-align: center;
 	color: #fff;
 	width: 60%;
 	margin-top: 2rem;
 	padding: .5rem  1.25rem;
-	font-size: 2rem;
+	font-family: sans-serif;
+	font-size: 1.5rem;
 	text-decoration: none;
 }
 
@@ -151,7 +212,7 @@ header .colmar {
 		display: none;
 	}
 
-	#jumbotron-banner-mobile{
+	#jumbotron-banner-mobile {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -165,26 +226,26 @@ header .colmar {
 		padding-bottom: 2rem;
 	}
 
-	.banner-mobile{
+	.banner-mobile {
 		font-family: "oswald";
 		padding: 0 1rem;
 	}
 
-	.banner-mobile .bigger{
+	.banner-mobile .bigger {
 		padding-bottom: 2rem;
 		font-size: 3.5rem;
 		font-weight: bold;
 		color: #767a7a;
 	}
 
-	.banner-mobile .smaller{
+	.banner-mobile .smaller {
 		margin-bottom: 1.5rem;
 		font-size: 2rem;
 		line-height: 1.2;
 		color: #383d3d;
 	}
 
-	.banner-mobile .button-mobile{
+	.banner-mobile .button-mobile {
 		display: inline-block;
 		background-color: #767a7a;
 		text-align: center;
@@ -199,127 +260,108 @@ header .colmar {
 
 }
 
-#feature{
+/* feature Section */
+
+#feature {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	height: auto;
 }
 
-#feature-mobile{
+#feature-mobile {
 	display: none;
 }
 
-.feature-main{
+.feature-main {
 	display: flex;
 	flex-direction: column;
 	padding: 2rem 1.5rem;
 	width: 60%;
+	background-color: #ccc;
 }
 
-.feature-main .main-image{
+.feature-main .main-image {
 	padding-bottom: 1.5rem;
 	width: 100%;
 	height: auto;
 }
 
-.feature-main .main-title{
+.feature-main .main-title {
 	padding-bottom: 1.5rem;
+	font-family: "oswald";
 	font-size: 3rem;
 	font-weight: bold;
+	color: #e5e8e5;
 }
 
-.feature-main .main-text{
+.feature-main .main-text {
 	font-size: 1.5rem;
+	color: #767a7a;
 }
 
 
-.feature-main .main-author{
+.feature-main .main-author {
+	font-family: sans-serif;
 	font-size: 1.3rem;
 	padding: 2rem 0;
+	color: purple;
 }
 
-.feature-other{
+.feature-other {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
 	height: auto;
 	border-left: 2px solid #e5e8e5;
-}
-
-.container{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 100%;
-}
-
-.item-image{
-	width: 35%;
-	display: inline-block;
+	border-right: 2px solid #e5e8e5;
+	background-color: seashell;
 }
 
 .feature-other .top .item-image {
 	padding: 2rem 1rem 1rem 1rem;
 }
 
-.feature-other .top{
+.feature-other .top {
 	border-bottom: 6px double #e5e8e5;
 }
 
-.bottom{
-	background: #e5e8e5;
-}
-
-.mid .item-image,
-.bottom .item-image{
-	padding: 1rem;
-}
-
-.item-image img{
-	width: 100%;
-}
-
-.item-column .item-title,
-.item-column .item-description{
-	padding-bottom: .5rem;
-
-}
-
 .item-column .item-link {
+	font-family: sans-serif;
+	font-size: 1.2rem;
 	text-decoration: none;
 }
 
 @media only screen and (max-width: 480px) {
-	#feature-mobile{
+	#feature-mobile {
 		display: flex;
 		flex-direction: column;
 		background-color: seashell;
 		width: 100%;
 	}
 
-	#feature{
+	#feature {
 		display: none;
 	}
 
-	.feature-main{
+	.feature-main {
 		display: none;
 	}
 
-	.feature-other{
+	.feature-other {
 		display: none;
 	}
 
-	.top-mobile{
+	.top-mobile {
 		padding-top: 1rem;
 	}
 
-	.container-mobile{
+	.container-mobile {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
 
-	.item-image-mobile{
+	.item-image-mobile {
 		padding-bottom: 2rem;
 	}
 
@@ -327,30 +369,30 @@ header .colmar {
 		width: 100%;
 	}
 
-	.item-column-mobile{
+	.item-column-mobile {
 		padding-left: 1rem;
 	}
 
-	.item-column-mobile h3{
+	.item-column-mobile h3 {
 		font-size: 2rem;
 		color: #383d3d;
 	}
 
-	.item-column-mobile p{
+	.item-column-mobile p {
 		font-size: 1.5rem;
 		font-weight: 300;
 		line-height: 1.1;
 		color: #767a7a;
 	}
 
-	.item-column-mobile a{
+	.item-column-mobile a {
 		font-family: sans-serif;
 		font-size: 1.2rem;
 		text-decoration: none;
 	}
 
 	.item-column-mobile h3,
-	.item-column-mobile p{
+	.item-column-mobile p {
 		padding-bottom: .5rem;
 	}
 
@@ -364,66 +406,89 @@ header .colmar {
 	}
 }
 
-#courses{
+/* Courses Section */
+
+#courses {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: #e5e8e5;
 	padding: 2rem 4.5rem;
-	width: 100%;
 }
 
-#courses-mobile{
+#courses-mobile {
 	display: none;
 }
 
-.introductory{
+.introductory {
 	padding-bottom: 2rem;
+	font-family: "oswald";
+	font-size: 3.5rem;
+	font-weight: bold;
+	opacity: .75;
 }
 
-.course-list{
+.course-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	width: 100%;
 }
 
-.course{
+.course {
 	display: flex;
 	flex-direction: column;
-	margin: 0;
+	width: 30%;
 	background-color: #fff;
-	width: 32%;
 	margin-bottom: 2rem;
 }
 
-.middle{
+.middle {
 	margin-left: 2rem;
 	margin-right: 2rem;
 }
 
-.course-image{
+.course-image {
 	height: auto;
 	width: auto;
 }
 
-.course-highlight{
+.course-highlight {
 	padding-left: 1rem;
 }
 
 
 
-.course-title{
+.course-title {
 	padding-top: 1rem;
+	font-family: "oswald";
+	font-size: 2rem;
+	font-weight: bold;
+	opacity: .75;
+}
+
+.course-header {
+	font-family: helvetica;
+	font-size: 1.5rem;
+	line-height: 1.3;
+	color: #767a7a;
+}
+
+.course-subjects {
+	font-family: helvetica;
+	font-size: 1.2rem;
+	line-height: 1.3;
+	color: #383d3d;
 }
 
 .course-title,
 .course-header,
-.course-subjects{
+.course-subjects {
 	padding-bottom: .5rem;
 }
 
 @media only screen and (max-width: 480px) {
-	#courses-mobile{
+	#courses-mobile {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -433,11 +498,11 @@ header .colmar {
 		background-color: #e5e8e5;
 	}
 
-	#courses{
+	#courses {
 		display: none;
 	}
 
-	.introductory-mobile{
+	.introductory-mobile {
 		padding-top: 2rem;
 		padding-bottom: 1rem;
 		text-align: center;
@@ -447,7 +512,7 @@ header .colmar {
 	}
 
 
-	.course-list-mobile li{
+	.course-list-mobile li { 
 		padding: 1rem 1rem 1.5rem 1rem;
 		list-style: none;
 		color: #383d3d;
@@ -459,44 +524,64 @@ header .colmar {
 	}
 }
 
-#thesis-exhibit{
+/* Thesis Exhibit Section */
+
+#thesis-exhibit {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	padding: 2rem 0 2rem 1.5rem;
+	width: 100%;
 }
 
-.thesis-row{
+#thesis-exhibit-mobile {
+	display: none;
+}
+
+.thesis-row {
 	display: flex;
 	flex-direction: row;
 }
 
-.thesis-title{
+.thesis-title {
 	padding-bottom: 2rem;
+	font-family: "oswald";
+	font-size: 3.5rem;
+	font-weight: bold;
+	opacity: .75;
 }
 
-.thesis-title h2{
+.thesis-title h2 {
 	text-align: center;
 }
 
-.thesis-left{
+.thesis-left {
 	display: flex;
 	flex-direction: column;
 	padding-right: 1.5rem;
 	width: 60%;
 }
 
-.thesis-video video{
+.thesis-video video {
 	width: 100%;
 	padding-right: 1.5rem;
 	padding-bottom: 1.5rem;
 }
 
-.thesis-urban h3{
+.thesis-urban h3 {
 	padding-bottom: .5rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #383d3d;
 }
 
-.thesis-right{
+.thesis-urban p {
+	font-size: 1.5rem;
+	color: #767a7a;
+	line-height: 1.4;
+}
+
+.thesis-right {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
@@ -504,38 +589,41 @@ header .colmar {
 }
 
 @media only screen and (max-width: 480px) {
-#thesis-exhibit-mobile {
-	padding: 2rem 0 1rem 0;
-	width: 100%;
-	background-color: #fff;
+	#thesis-exhibit-mobile {
+		padding: 2rem 0 1rem 0;
+		width: 100%;
+		background-color: #fff;
 	}
 
-#thesis-exhibit{
-	display: none;
+	#thesis-exhibit {
+		display: none;
 	}
 
-.thesis-title-mobile{
-	padding-bottom: 1rem;
+	.thesis-title-mobile {
+		padding-bottom: 1rem;
 	}
 
-.thesis-title-mobile h2{
-	font-family: "oswald";
-	font-size: 3.5rem;
-	font-weight: bold;	
-	text-align: center;
-	opacity: .75;
-}
+	.thesis-title-mobile h2 {
+		font-family: "oswald";
+		font-size: 3.5rem;
+		font-weight: bold;	
+		text-align: center;
+		opacity: .75;
+	}
 
-.thesis-video-mobile{
-	padding-bottom: 1.5rem;
+	.thesis-video-mobile {
+		padding-bottom: 1.5rem;
 	}	
 
-.thesis-video-mobile video{
-	width: 100%;
+	.thesis-video-mobile video {
+		width: 100%;
 	}
-
 }
-#footer{
+
+/* Footer Section */
+
+
+#footer {
 	padding: 1rem 0 2rem 1.5rem;
 	border-top: 1px solid #e5e8e5;
 	width: 100%;
@@ -543,30 +631,29 @@ header .colmar {
 	color: #383d3d;
 }
 
-.footer-container{
+.footer-container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	width: 100%;
 }
 
-.terms-privacy ul{
+.terms-privacy ul {
 	display: inline-flex;
 	flex-direction: row;
 	list-style: none;
 }
 
-.terms-privacy li{
+.terms-privacy li {
 	text-decoration: none;
 }
 
-.terms-privacy li:first-child{
+.terms-privacy li:first-child {
 	padding-right: .5rem;
 }
 
 @media only screen and (max-width: 480px) {
-.terms-privacy{
-	display: none;
-}
-
+	.terms-privacy {
+		display: none;
+	}
 }
